@@ -13,3 +13,6 @@ build/
 # Ignore editor files
 .vscode/
 .idea/
+
+
+public/images/
