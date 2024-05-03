@@ -6,7 +6,7 @@ const authController = require('./controllers/authController')
 const blogController = require('./controllers/blogController')
 const multer = require('multer')
 const app = express()
-
+const port = process.env.PORT || 5000
 //connect db
 mongoose.set('strictQuery', false);
 mongoose.connect(process.env.MONGODB_URI)
@@ -41,4 +41,4 @@ app.post('/upload', upload.single("image"), async(req, res) => {
 })
 
 // connect server
-app.listen(process.env.PORT, () => console.log('Server has been started successfully'))
+app.listen(port, () => console.log('Server has been started successfully'))
