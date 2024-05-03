@@ -6,7 +6,7 @@ const authController = require('./controllers/authController')
 const blogController = require('./controllers/blogController')
 const multer = require('multer')
 const app = express()
-const port = process.env.PORT || 5000
+const port = process.env.PORT 
 //connect db
 mongoose.set('strictQuery', false);
 mongoose.connect(process.env.MONGODB_URI)
